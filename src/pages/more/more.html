@@ -1,0 +1,29 @@
+
+<ion-header>
+
+  <ion-navbar color="danger">
+    <ion-title>More (เพิ่มเติม)</ion-title>
+
+    <ion-buttons end>
+      <button ion-button icon-only (click)="stopAll()">
+        <ion-icon name="notifications-off"></ion-icon>
+
+      </button>
+    </ion-buttons>
+
+  </ion-navbar>
+
+  
+
+</ion-header>
+
+<ion-content padding>
+  <ion-list>
+    <ion-item  *ngFor="let item of moreSoundLists" (click)="onClick(item)" [ngClass]=" { 'select' : selectItemName == item , 'unselect' : selectItemName != item }">
+      <ion-avatar item-start>
+        <img src="assets/imgs/speaker.png">
+      </ion-avatar>
+      <h2>{{ item }}</h2>
+    </ion-item>
+  </ion-list>
+</ion-content>

@@ -6,11 +6,17 @@ import { StatusBar } from '@ionic-native/status-bar';
 
 import { MyApp } from './app.component';
 import { HomePage } from '../pages/home/home';
+import { TabsPage } from '../pages/tabs/tabs';
+import { MorePage } from '../pages/more/more';
+
+import { NativeAudio } from '@ionic-native/native-audio';
 
 @NgModule({
   declarations: [
     MyApp,
-    HomePage
+    HomePage,
+    TabsPage,
+    MorePage
   ],
   imports: [
     BrowserModule,
@@ -19,10 +25,12 @@ import { HomePage } from '../pages/home/home';
   bootstrap: [IonicApp],
   entryComponents: [
     MyApp,
-    HomePage
+    HomePage,
+    TabsPage,
+    MorePage
   ],
   providers: [
-    StatusBar,
+    StatusBar,NativeAudio,
     SplashScreen,
     {provide: ErrorHandler, useClass: IonicErrorHandler}
   ]
